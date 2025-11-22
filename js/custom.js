@@ -510,3 +510,106 @@ $(function () {
         $(this).addClass("active").siblings().removeClass("active");
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const columns = document.querySelectorAll('.col-image');
+
+  columns.forEach(column => {
+    const images = Array.from(column.querySelectorAll('.image-wrap'));
+    const cloneSet = images.map(img => img.cloneNode(true));
+
+    // Append the cloned set for seamless looping
+    cloneSet.forEach(clone => column.appendChild(clone));
+  });
+});
+
+class Counter {
+    constructor() {
+        this.counters = document.querySelectorAll('.counter-number');
+        this.isAnimated = false;
+        this.init();
+    }
+
+    init() {
+        // Intersection Observer for scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !this.isAnimated) {
+                    this.isAnimated = true;
+                    this.animateCounters();
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        });
+
+        observer.observe(document.querySelector('.counter-section'));
+    }
+
+    animateCounters() {
+        this.counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+            let current = 0;
+
+            // Add animation class
+            counter.classList.add('animated');
+
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    counter.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = this.formatNumber(target);
+                }
+            };
+
+            updateCounter();
+        });
+    }
+
+    formatNumber(num) {
+        // Add comma for thousands
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+}
+
+// Initialize counter when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    new Counter();
+});
+
+// Optional: Add some cool effects
+document.querySelectorAll('.counter-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+});
+
+// Add some particles background (optional)
+function createParticles() {
+    const section = document.querySelector('.counter-section');
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.style.position = 'absolute';
+        particle.style.width = Math.random() * 5 + 2 + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.background = 'rgba(255, 215, 0, 0.3)';
+        particle.style.borderRadius = '50%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.pointerEvents = 'none';
+        section.style.position = 'relative';
+        section.appendChild(particle);
+    }
+}
+
+// Uncomment below line if you want particles
+// createParticles();
