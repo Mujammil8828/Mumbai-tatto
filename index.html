@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from duruthemes.com/demo/html/artefact/multipage-light-slideshow/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Nov 2025 07:10:28 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,7 +28,13 @@
     </div>
     <!-- Cursor -->
     <div class="cursor js-cursor"></div>
-       <!-- Navbar -->
+     <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md">
         <div class="container">
             <!-- Logo -->
@@ -47,7 +51,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Tattoo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tattoo.html">Tattoo</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Piercing</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">NAILS & EYELASHES</a></li>
                     <li class="nav-item"><a class="nav-link" href="portfolio.html">Gallery</a></li>
@@ -278,35 +282,6 @@
             </div>
         </div>
     </section>
-    <!-- comedown  -->
-
-    <section class="counter-section">
-        <div class="container">
-            <div class="counter-grid">
-                <div class="counter-item">
-                    <div class="counter-number" data-count="2000">0</div>
-                    <div class="counter-title">Satisfy Customers</div>
-                </div>
-
-                <div class="counter-item">
-                    <div class="counter-number" data-count="4">0</div>
-                    <div class="counter-title">Amazing Artists</div>
-                </div>
-
-                <div class="counter-item">
-                    <div class="counter-number" data-count="550">0</div>
-                    <div class="counter-title">Google Reviews</div>
-                </div>
-
-                <div class="counter-item">
-                    <div class="counter-number" data-count="22">0</div>
-                    <div class="counter-title">Years of Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Promo video - Testiominals -->
     <section class="testimonials video-wrapper video">
         <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/2.jpg"
@@ -424,37 +399,40 @@
                     </div>
                     <!-- Appointment form -->
                     <div class="col-md-5 offset-md-1">
-                    <!-- <h5>Contact Form</h5> -->
-                    <form method="post" class="contact__form" action="https://duruthemes.com/demo/html/artefact/multipage-light-slideshow/mail.php">
-                        <!-- Form message -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert"> Your message was sent successfully. </div>
+                        <!-- <h5>Contact Form</h5> -->
+                        <form method="post" class="contact__form"
+                            action="https://duruthemes.com/demo/html/artefact/multipage-light-slideshow/mail.php">
+                            <!-- Form message -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                        Your message was sent successfully. </div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Form elements -->
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <input name="name" type="text" placeholder="Your Name *" required>
+                            <!-- Form elements -->
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <input name="name" type="text" placeholder="Your Name *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input name="email" type="email" placeholder="Your Email *" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input name="phone" type="text" placeholder="Your Number *" required>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <input name="subject" type="text" placeholder="Subject *" required>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *"
+                                        required></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <input name="submit" type="submit" value="Send Message">
+                                </div>
                             </div>
-                            <div class="col-md-6 form-group">
-                                <input name="email" type="email" placeholder="Your Email *" required>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input name="phone" type="text" placeholder="Your Number *" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input name="subject" type="text" placeholder="Subject *" required>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
-                            </div>
-                            <div class="col-md-12">
-                                <input name="submit" type="submit" value="Send Message">
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
