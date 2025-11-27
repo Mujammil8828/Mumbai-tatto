@@ -611,5 +611,71 @@ function createParticles() {
     }
 }
 
-// Uncomment below line if you want particles
-// createParticles();
+// tattoo salide /
+ const slides = document.getElementById('slides');
+    const slideCount = slides.children.length;
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const dotsContainer = document.getElementById('dots');
+    let currentIndex = 0;
+
+    // Create dots
+    for(let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if(i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+    const dots = dotsContainer.querySelectorAll('.dot');
+
+    // Show caption animation for current slide
+    function showCaption(index) {
+      slides.querySelectorAll('.caption').forEach((cap, i) => {
+        cap.classList.remove('show');
+        if(i === index) {
+          setTimeout(() => cap.classList.add('show'), 200);
+        }
+      });
+    }
+
+    function updateSlider() {
+      slides.style.transform = `translateX(-${currentIndex * 720}px)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentIndex].classList.add('active');
+      showCaption(currentIndex);
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateSlider();
+      resetAutoSlide();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateSlider();
+      resetAutoSlide();
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    // Auto slide every 5 seconds
+    let autoSlideInterval = setInterval(nextSlide, 5000);
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Initial setup
+    updateSlider();
