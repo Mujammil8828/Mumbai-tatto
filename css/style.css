@@ -906,7 +906,7 @@ blockquote cite:before {
   }
 
   .caption {
-    position: absolute;
+    /* position: absolute; */
     bottom: 30px;
     left: 40px;
     color: #fff;
@@ -3862,6 +3862,7 @@ textarea:focus,
 .gallery-box .gallery-img {
     position: relative;
     overflow: hidden;
+    border-radius: 30px;
 }
 
 .gallery-box .gallery-img:after {
