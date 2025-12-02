@@ -1296,7 +1296,7 @@ blockquote cite:before {
 
 .footer-link ul li {
     display: grid;
-    line-height: 40px;
+    line-height: 30px;
 }
 
 .footer-social-links ul li a {
