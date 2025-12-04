@@ -1,0 +1,29 @@
+
+@media screen and (max-width: 767px) {
+   .image-slide-body {
+    margin: 0;
+    display: flex;
+    min-height: 0vh;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #FFF;
+}
+.zakiiii{
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
