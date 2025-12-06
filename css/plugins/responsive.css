@@ -46,8 +46,16 @@ ease;
     font-size: 30px;
     margin-top: 22px;
 }
-
-
+.section-padding {
+    /* padding: 50px 0; */
+    margin-top: 25px;
+}
+.artefact-post-prev-next {
+    padding: 0px 0;
+    /* border: none; */
+    /* border-top: 1px solid rgba(0, 0, 0, 0.05); */
+    margin-top: -70px;
+}
 
 
 

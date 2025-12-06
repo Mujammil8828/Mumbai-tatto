@@ -139,7 +139,8 @@ b {
     font-weight: 400;
     color: #904d30;
 }
-.mob-num a { 
+
+.mob-num a {
     color: #000;
 }
 
@@ -536,13 +537,13 @@ blockquote cite:before {
 }
 
 .tattttt {
-    margin-left:
-        /* 150px; */
+   /* margin-left: 150px; */
 }
 
 .bsnd-tattt h1 {
     color: #000;
     font-size: 30px;
+    margin-top: 25px;
 }
 
 .loader {
@@ -859,8 +860,7 @@ blockquote cite:before {
     border-radius: 25px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
     background: #111;
-    
-    margin-bottom: 55px;
+    margin-top: 30px;
 }
 
 .slides {
@@ -1884,7 +1884,7 @@ hr {
 
 .image-content {
     position: absolute;
-    color:white;
+    color: white;
     top: 275px;
     left: 10px;
     clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
