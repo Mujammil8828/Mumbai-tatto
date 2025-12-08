@@ -1052,7 +1052,11 @@ blockquote cite:before {
 /* ======= Section style ======= */
 .section-padding {
     padding: 50px 0;
-    margin-top: 25px;
+    /* margin-top: 25px; */
+}
+.section-paddingfom {
+    padding: 50px 0;
+     margin-top: 25px; 
 }
 
 .section-title {
