@@ -19,12 +19,12 @@
 
 .carousel {
     position: relative;
-    width: 390px;
+    width: 360px;
     height: 250px;
     overflow: hidden;
     border-radius: 25px;
     /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8); */
-    background: #111;
+    /* background: #111; */
         margin-bottom: 0px;
 
     margin-top: 30px;
@@ -34,7 +34,7 @@
     width: 55%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.5);
+    /* filter: brightness(0.5); */
     transition: transform 1.5s 
 ease, filter 1.3s 
 ease;
@@ -68,10 +68,18 @@ ease;
     letter-spacing: 1.5px;
     user-select: none;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
+    animation-duration: 1s; 
 }
 
+    .banner-header h1 {
+        font-size: 24px;
+    }
 
+.disp-set2{
+    display:block !important;
+}
+
+    
 
 
 }

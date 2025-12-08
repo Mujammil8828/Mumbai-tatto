@@ -1071,6 +1071,10 @@ blockquote cite:before {
     margin-bottom: 20px;
 }
 
+.disp-set2{
+    display: block;
+}
+
 .section-title span {
     color: transparent;
     -webkit-text-stroke: 1px #904d30;
