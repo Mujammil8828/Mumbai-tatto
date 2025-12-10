@@ -48,7 +48,7 @@
 
     .section-padding {
         /* padding: 50px 0; */
-        margin-top: 25px;
+        /* margin-top: 25px; */
     }
 
     .artefact-post-prev-next {
@@ -79,8 +79,13 @@
     .disp-set {
         display: block !important;
     }
+  .counter-section {
+        padding: 0rem 1rem;
+    }
 
-
+.team .item:last-child {
+    margin-bottom: 0px;
+}
 
 
 }
