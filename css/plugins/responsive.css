@@ -77,7 +77,7 @@
     }
 
     .disp-set {
-        display: block !important;
+       flex-direction: column-reverse;
     }
   .counter-section {
         padding: 0rem 1rem;
