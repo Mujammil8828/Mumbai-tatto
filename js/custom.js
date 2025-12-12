@@ -611,6 +611,52 @@ function createParticles() {
     }
 }
 
+// FAQ 
+const faqItems = document.querySelectorAll(".faq-item");
+
+function closeItem(item) {
+  const button = item.querySelector(".faq-header");
+  const body = item.querySelector(".faq-body");
+
+  item.classList.remove("is-open");
+  button.setAttribute("aria-expanded", "false");
+  body.style.maxHeight = 0;
+}
+
+function openItem(item) {
+  const button = item.querySelector(".faq-header");
+  const body = item.querySelector(".faq-body");
+
+  item.classList.add("is-open");
+  button.setAttribute("aria-expanded", "true");
+  body.style.maxHeight = body.scrollHeight + "px";
+}
+
+// Initialize open/closed state
+faqItems.forEach((item) => {
+  const body = item.querySelector(".faq-body");
+  if (item.classList.contains("is-open")) {
+    body.style.maxHeight = body.scrollHeight + "px";
+  } else {
+    body.style.maxHeight = 0;
+  }
+});
+
+// Click behavior (only one open at a time)
+faqItems.forEach((item) => {
+  const button = item.querySelector(".faq-header");
+
+  button.addEventListener("click", () => {
+    const isOpen = item.classList.contains("is-open");
+
+    faqItems.forEach((faq) => closeItem(faq));
+
+    if (!isOpen) {
+      openItem(item);
+    }
+  });
+});
+
 // tattoo salide /
  const slides = document.getElementById('slides');
     const slideCount = slides.children.length;
