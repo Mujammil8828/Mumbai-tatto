@@ -1101,7 +1101,7 @@ blockquote cite:before {
 
 .caption {
     /* position: absolute; */
-    bottom: 30px;
+    bottom: 0px;
     left: 40px;
     color: #fff;
     font-size: 26px;
@@ -2918,7 +2918,7 @@ hr {
     background: #101010;
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 48%;
     width: 55%;
     padding: 60px 45px;
     -ms-transform: translate(0, -50%);
@@ -2930,14 +2930,16 @@ hr {
     left: auto;
     right: 0;
     background: #fff;
+    padding-top: 10px;
 }
 
 .team .item .caption.padding-left {
-    padding-left: 45px;
+    padding-left: 30px;
+    padding-top: 17px
 }
 
 .team .item.right .caption.padding-left {
-    padding-right: 45px;
+    padding-right: 0px;
 }
 
 .team .item .name {
@@ -2957,7 +2959,7 @@ hr {
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .team .social-list {
@@ -2990,6 +2992,9 @@ hr {
 
 .team .social-list a+a {
     margin-left: 15px;
+}
+.imdd{
+height: 400PX;
 }
 
 .team .social-list a:hover {
