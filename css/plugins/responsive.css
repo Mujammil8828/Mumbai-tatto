@@ -99,7 +99,12 @@
     vertical-align: middle;
     padding-left: 0px;
 }
-
+.zah-img{
+    display: none;
+}
+.zah-img2{
+    display: block;
+}
 
 
 }

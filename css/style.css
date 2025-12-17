@@ -1099,6 +1099,10 @@ blockquote cite:before {
     }
 }
 
+.zah-img2{
+    display: none;
+}
+
 .caption {
     /* position: absolute; */
     bottom: 0px;
